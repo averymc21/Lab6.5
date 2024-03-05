@@ -9,11 +9,12 @@ body {
 
 button {
     background-color: pink;
+    text-align: center;
     color: white;
     font-size: 18px; 
     padding: 30px 60px; 
     border: none; 
-    border-radius: 5px; 
+    border-radius: 7px; 
 }
 
 
