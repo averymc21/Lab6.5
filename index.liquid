@@ -2,4 +2,19 @@
 layout: layout.liquid
 title: Random Name Generator
 ---
-<h1 x-text="name"></h1>
+<head>
+    <h1 x-text="name"></h1>
+    <main x-data="{ name: '' }">
+            <h1 x-text="name"></h1>
+            <button @click="name = getRandomName()">Generate Random Name</button>
+        </main>
+        <script src="/scripts.js"></script>
+        <script>
+            function getRandomName() {
+                const names = ['Olivia', 'Noah', 'Emma', 'Liam', 'Amelia', 'Oliver', 'Avery', 'Abbey', 'Sophia'];
+                return names[Math.floor(Math.random() * names.length)];
+            }
+        </script>
+    <!-- Link to Alpine.js -->
+    <script src="//unpkg.com/alpinejs"></script>
+</head>
