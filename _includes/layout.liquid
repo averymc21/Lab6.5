@@ -1,22 +1,24 @@
----
-title: 11ty Boilerplate
----
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
-  <link rel="stylesheet" href="/styles/screen.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My 11ty Project</title>
+    <link rel="stylesheet" href="/styles/screen.css">
+    <!-- Link to Alpine.js -->
+    <script src="//unpkg.com/alpinejs"></script>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="/" title="Go home">Home</a></li>
-      <li><a href="/about/" title="About the boilerplate">About</a></li>
-    </ul>
-  </nav>
-    {{ content }}
+    <main x-data="{ name: '' }">
+        <h1 x-text="name"></h1>
+        <button @click="name = getRandomName()">Generate Random Name</button>
+    </main>
+    <script src="/scripts.js"></script>
+    <script>
+        function getRandomName() {
+            const names = ['Olivia', 'Noah', 'Emma', 'Liam', 'Amelia', 'Oliver', 'Avery', 'Abbey', 'Sophia'];
+            return names[Math.floor(Math.random() * names.length)];
+        }
+    </script>
 </body>
 </html>

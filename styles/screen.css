@@ -6,11 +6,14 @@ body {
     text-align: center;
 }
 
-nav {
-    margin: 40px auto 0 auto;
-    width: 250px;
-    border-radius: 50px;
-    background: #212431;
+
+button {
+    background-color: pink;
+    color: white;
+    font-size: 18px; 
+    padding: 30px 60px; 
+    border: none; 
+    border-radius: 5px; 
 }
 
 nav ul {
@@ -23,14 +26,6 @@ nav ul {
 nav ul li {
     list-style-type: none;
     margin: 0;
-}
-
-nav ul li a {
-    display: inline-block;
-    padding: 20px;
-    color: #EAE8FF;
-    text-decoration: none;
-    font-size: 1.2em;
 }
 
 h1 {
